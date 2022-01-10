@@ -1,0 +1,42 @@
+package myLabTest;
+
+import java.util.Scanner;
+
+class LabTest1_Q2 {
+
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		int sales,hours;
+		double commisions, hourlywages, dailywages;
+		
+		System.out.print("Enter sales           :  RM");
+		sales=in.nextInt();
+		System.out.print("Enter hours worked    :  RM");
+		hours=in.nextInt();
+		hourlywages=hours*5;
+		
+		
+		if(sales>150 && sales<301) {
+			commisions=0.05*sales;
+		}
+		
+		else if(sales>300 && sales<501) {
+			commisions=0.1*sales;
+		}
+		
+		else if(sales>500){
+			commisions=0.15*sales;
+		}
+		
+		else {
+			commisions=0*sales;
+		}
+		
+		dailywages=hourlywages+commisions;
+		System.out.println();
+		System.out.println("Commisions           :  RM" + commisions);
+		System.out.println("Daily wages          :  RM" + dailywages);
+
+	}
+
+}
